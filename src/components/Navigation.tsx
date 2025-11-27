@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import logo from "@/assets/bizwhite-logo.png";
@@ -44,53 +44,54 @@ const Navigation = () => {
             </Link>
             
             {/* Products Dropdown */}
-            <div className="relative group">
-              <button 
-                className="flex items-center text-foreground hover:text-primary transition-colors font-medium"
-                onMouseEnter={() => setProductsOpen(true)}
-              >
+            <div 
+              className="relative"
+              onMouseEnter={() => setProductsOpen(true)}
+              onMouseLeave={() => {
+                setProductsOpen(false);
+                setBentoniteOpen(false);
+              }}
+            >
+              <button className="flex items-center text-foreground hover:text-primary transition-colors font-medium">
                 Products <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div 
-                className={`absolute top-full left-0 mt-2 w-[500px] bg-white rounded-lg shadow-xl border border-gray-200 p-4 grid grid-cols-2 gap-2 ${productsOpen ? 'block' : 'hidden'} group-hover:block`}
-                onMouseLeave={() => setProductsOpen(false)}
-              >
-                {products.map((product) => (
-                  <Link
-                    key={product.name}
-                    to={product.href}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+              {productsOpen && (
+                <div className="absolute top-full left-0 mt-2 w-[280px] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                  {products.map((product) => (
+                    <Link
+                      key={product.name}
+                      to={product.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors"
+                    >
+                      {product.name}
+                    </Link>
+                  ))}
+                  {/* Bentonite with submenu */}
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => setBentoniteOpen(true)}
+                    onMouseLeave={() => setBentoniteOpen(false)}
                   >
-                    {product.name}
-                  </Link>
-                ))}
-                {/* Bentonite with submenu */}
-                <div 
-                  className="relative"
-                  onMouseEnter={() => setBentoniteOpen(true)}
-                  onMouseLeave={() => setBentoniteOpen(false)}
-                >
-                  <Link
-                    to="/bentonite"
-                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
-                  >
-                    Bentonite <ChevronDown className="ml-1 h-3 w-3 -rotate-90" />
-                  </Link>
-                  {bentoniteOpen && (
-                    <div className="absolute left-full top-0 ml-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 p-2">
-                      {bentoniteSubmenu.map((item) => (
-                        <Link
-                          key={item.name}
-                          to={item.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                    <div className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer">
+                      <Link to="/bentonite">Bentonite</Link>
+                      <ChevronRight className="h-4 w-4" />
                     </div>
-                  )}
+                    {bentoniteOpen && (
+                      <div className="absolute left-full top-0 ml-1 w-[200px] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                        {bentoniteSubmenu.map((item) => (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             <Button asChild variant="default" className="bg-primary hover:bg-primary/90">
