@@ -77,7 +77,7 @@ const Navigation = () => {
                       <Link to="/bentonite" onClick={() => setProductsOpen(false)}>Bentonite</Link>
                       <ChevronRight className="h-4 w-4" />
                     </div>
-                    <div className={`absolute left-full top-0 pl-1 ${bentoniteOpen ? 'block' : 'hidden'}`}>
+                    <div className={`absolute right-full top-0 pr-1 ${bentoniteOpen ? 'block' : 'hidden'}`}>
                       <div className="w-[200px] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
                         {bentoniteSubmenu.map((item) => (
                           <Link
