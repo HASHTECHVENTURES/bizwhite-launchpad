@@ -1,7 +1,7 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface ProductCardProps {
   title: string;
@@ -11,6 +11,13 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ title, description, image, href }: ProductCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+    navigate(href);
+  };
+
   return (
     <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary">
       <div className="relative h-64 overflow-hidden">
@@ -30,11 +37,9 @@ const ProductCard = ({ title, description, image, href }: ProductCardProps) => {
         </p>
       </CardContent>
       <CardFooter>
-        <Button asChild variant="ghost" className="group/btn text-primary hover:text-primary hover:bg-primary/10 p-0">
-          <Link to={href}>
-            Read More
-            <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-          </Link>
+        <Button variant="ghost" className="group/btn text-primary hover:text-primary hover:bg-primary/10 p-0" onClick={handleClick}>
+          Read More
+          <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
         </Button>
       </CardFooter>
     </Card>
