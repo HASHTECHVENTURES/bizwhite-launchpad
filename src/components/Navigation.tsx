@@ -147,12 +147,23 @@ const Navigation = () => {
                     <div>
                       <button 
                         className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors w-full"
-                        onClick={() => setBentoniteOpen(!bentoniteOpen)}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setBentoniteOpen(!bentoniteOpen);
+                        }}
                       >
                         Bentonite <ChevronDown className={`ml-1 h-3 w-3 transition-transform ${bentoniteOpen ? 'rotate-180' : ''}`} />
                       </button>
                       {bentoniteOpen && (
                         <div className="ml-4 mt-1 space-y-1">
+                          <Link
+                            to="/bentonite"
+                            className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Bentonite Overview
+                          </Link>
                           {bentoniteSubmenu.map((item) => (
                             <Link
                               key={item.name}
