@@ -14,41 +14,49 @@ const ProductsSection = () => {
       title: "Silica Sand for Solar Panels",
       description: "BizWhite Silica–SG11 low iron silica sand undergoes washing, spiral magnetic separation, scrubbing and leaching to remove impurities.",
       image: silicaImage,
+      href: "/silica-sand",
     },
     {
       title: "Ultra White Kaolin",
       description: "Premium brightness Kaolin suitable for Paper & Pulp, Paints, Inks & Coatings, and Refractories.",
       image: kaolinImage,
+      href: "/kaolin",
     },
     {
       title: "Oil Boost™ Bleaching Earth",
       description: "Bleaching earth suitable for moderate to hard-to-bleach oils like soybean, sunflower, rapeseed, caster, palm and coconut oil.",
       image: oilBoostImage,
+      href: "/bleaching-earth",
     },
     {
       title: "Quartz Crystalline Mineral",
       description: "Suitable for engineered stone, ceramics, refractories, semiconductor and glass industries.",
       image: quartzImage,
+      href: "/quartz",
     },
     {
       title: "Clay Catalysts",
       description: "Acidic catalysts used in reactions involving olefins and aromatics.",
       image: catalystImage,
+      href: "/clay-catalysts",
     },
     {
       title: "Feldspar",
       description: "Used in the cement and glass industries for strength and durability.",
       image: feldsparImage,
+      href: "/feldspar",
     },
     {
       title: "Agriculture Minerals",
       description: "Minerals for home gardens and agriculture farming.",
       image: agricultureImage,
+      href: "/agriculture",
     },
     {
       title: "Oil Well Drilling Grade Bentonite",
       description: "Used to seal boreholes, remove drill cuttings and lubricate drilling heads.",
       image: drillingImage,
+      href: "/oil-water-drilling",
     },
   ];
 
@@ -72,6 +80,7 @@ const ProductsSection = () => {
               title={product.title}
               description={product.description}
               image={product.image}
+              href={product.href}
             />
           ))}
         </div>
