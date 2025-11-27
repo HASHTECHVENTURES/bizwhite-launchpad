@@ -7,6 +7,7 @@ import logo from "@/assets/bizwhite-logo.png";
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
+  const [bentoniteOpen, setBentoniteOpen] = useState(false);
 
   const products = [
     { name: "Silica Sand", href: "/silica-sand" },
@@ -15,7 +16,9 @@ const Navigation = () => {
     { name: "Bleaching Earth", href: "/bleaching-earth" },
     { name: "Clay Catalysts", href: "/clay-catalysts" },
     { name: "Feldspar", href: "/feldspar" },
-    { name: "Bentonite", href: "/bentonite" },
+  ];
+
+  const bentoniteSubmenu = [
     { name: "Oil & Water Drilling", href: "/oil-water-drilling" },
     { name: "Agriculture", href: "/agriculture" },
   ];
@@ -61,6 +64,32 @@ const Navigation = () => {
                     {product.name}
                   </Link>
                 ))}
+                {/* Bentonite with submenu */}
+                <div 
+                  className="relative"
+                  onMouseEnter={() => setBentoniteOpen(true)}
+                  onMouseLeave={() => setBentoniteOpen(false)}
+                >
+                  <Link
+                    to="/bentonite"
+                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+                  >
+                    Bentonite <ChevronDown className="ml-1 h-3 w-3 -rotate-90" />
+                  </Link>
+                  {bentoniteOpen && (
+                    <div className="absolute left-full top-0 ml-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 p-2">
+                      {bentoniteSubmenu.map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary rounded-md transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -111,6 +140,36 @@ const Navigation = () => {
                         {product.name}
                       </Link>
                     ))}
+                    {/* Bentonite with submenu */}
+                    <div>
+                      <button 
+                        className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors w-full"
+                        onClick={() => setBentoniteOpen(!bentoniteOpen)}
+                      >
+                        Bentonite <ChevronDown className={`ml-1 h-3 w-3 transition-transform ${bentoniteOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {bentoniteOpen && (
+                        <div className="ml-4 mt-1 space-y-1">
+                          <Link
+                            to="/bentonite"
+                            className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            Overview
+                          </Link>
+                          {bentoniteSubmenu.map((item) => (
+                            <Link
+                              key={item.name}
+                              to={item.href}
+                              className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 )}
               </div>
