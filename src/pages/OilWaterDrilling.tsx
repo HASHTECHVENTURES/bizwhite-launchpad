@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import drillingImage from "@/assets/drilling.jpg";
+import bentoniteImage from "@/assets/bentonite.jpg";
+import bentoniteApiBw12 from "@/assets/bentonite-api-bw12.jpg";
 
 const OilWaterDrilling = () => {
   const advantages = [
@@ -85,7 +87,7 @@ const OilWaterDrilling = () => {
             </div>
             <div className="relative">
               <img
-                src={drillingImage}
+                src={bentoniteImage}
                 alt="Oil Drilling"
                 className="w-full rounded-lg shadow-xl"
               />
@@ -190,7 +192,7 @@ const OilWaterDrilling = () => {
             </div>
             <div className="relative">
               <img
-                src={drillingImage}
+                src={bentoniteApiBw12}
                 alt="API-BW12"
                 className="w-full rounded-lg shadow-xl"
               />
