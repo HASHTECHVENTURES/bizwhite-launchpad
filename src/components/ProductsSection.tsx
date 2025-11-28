@@ -61,14 +61,17 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section id="products" className="py-24 bg-secondary">
+    <section id="products" className="py-24 bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Our Products
+          <div className="inline-block bg-[#ff6b35] text-white px-4 py-1 text-sm font-semibold mb-4">
+            Our Services
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Tailored Mining Services for Every Venture
           </h2>
-          <div className="h-1 w-24 bg-primary mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="h-1 w-24 bg-[#ff6b35] mx-auto mb-6"></div>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Premium industrial minerals serving diverse global industries
           </p>
         </div>

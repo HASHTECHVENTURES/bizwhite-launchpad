@@ -7,7 +7,7 @@ const HighlightsSection = () => {
   };
 
   return (
-    <section className="py-12 md:py-24 bg-gray-100">
+    <section className="py-12 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {/* Certifications */}
@@ -19,11 +19,11 @@ const HighlightsSection = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="absolute inset-0 bg-[#1e3a5f]/90"></div>
+            <div className="absolute inset-0 bg-[#1a1a1a]/90"></div>
             <div className="relative z-10 p-6 md:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                  <Settings className="w-6 h-6 md:w-8 md:h-8 text-[#1e3a5f]" />
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0">
+                  <Settings className="w-6 h-6 md:w-8 md:h-8 text-white" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-white">
                   Certifications
@@ -39,7 +39,7 @@ const HighlightsSection = () => {
               <Link 
                 to="/about" 
                 onClick={handleClick}
-                className="inline-flex items-center text-primary font-bold text-base md:text-lg hover:underline"
+                className="inline-flex items-center text-[#ff6b35] font-bold text-base md:text-lg hover:underline"
               >
                 read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1" />
               </Link>
@@ -55,11 +55,11 @@ const HighlightsSection = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="absolute inset-0 bg-[#1e3a5f]/90"></div>
+            <div className="absolute inset-0 bg-[#1a1a1a]/90"></div>
             <div className="relative z-10 p-6 md:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                  <RefreshCw className="w-6 h-6 md:w-8 md:h-8 text-[#1e3a5f]" />
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0">
+                  <RefreshCw className="w-6 h-6 md:w-8 md:h-8 text-white" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-white">
                   Global Manufacturers & Consumer Insights
@@ -73,7 +73,7 @@ const HighlightsSection = () => {
               <Link 
                 to="/about" 
                 onClick={handleClick}
-                className="inline-flex items-center text-primary font-bold text-base md:text-lg hover:underline"
+                className="inline-flex items-center text-[#ff6b35] font-bold text-base md:text-lg hover:underline"
               >
                 read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1" />
               </Link>
@@ -89,11 +89,11 @@ const HighlightsSection = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="absolute inset-0 bg-[#1e3a5f]/90"></div>
+            <div className="absolute inset-0 bg-[#1a1a1a]/90"></div>
             <div className="relative z-10 p-6 md:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                  <CheckCircle className="w-6 h-6 md:w-8 md:h-8 text-[#1e3a5f]" />
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-6 h-6 md:w-8 md:h-8 text-white" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-white">
                   Quality Products
@@ -107,7 +107,7 @@ const HighlightsSection = () => {
               <Link 
                 to="/about" 
                 onClick={handleClick}
-                className="inline-flex items-center text-primary font-bold text-base md:text-lg hover:underline"
+                className="inline-flex items-center text-[#ff6b35] font-bold text-base md:text-lg hover:underline"
               >
                 read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1" />
               </Link>

@@ -19,7 +19,7 @@ const ProductCard = ({ title, description, image, href }: ProductCardProps) => {
   };
 
   return (
-    <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary">
+    <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 border-gray-700 hover:border-[#ff6b35] bg-white">
       <div className="relative h-64 overflow-hidden">
         <img
           src={image}
@@ -29,15 +29,15 @@ const ProductCard = ({ title, description, image, href }: ProductCardProps) => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
       <CardContent className="pt-6">
-        <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+        <h3 className="text-xl font-bold text-[#1a1a1a] mb-3 group-hover:text-[#ff6b35] transition-colors">
           {title}
         </h3>
-        <p className="text-muted-foreground leading-relaxed">
+        <p className="text-gray-600 leading-relaxed">
           {description}
         </p>
       </CardContent>
       <CardFooter>
-        <Button variant="ghost" className="group/btn text-primary hover:text-primary hover:bg-primary/10 p-0" onClick={handleClick}>
+        <Button variant="ghost" className="group/btn text-[#ff6b35] hover:text-[#ff6b35] hover:bg-[#ff6b35]/10 p-0" onClick={handleClick}>
           Read More
           <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
         </Button>

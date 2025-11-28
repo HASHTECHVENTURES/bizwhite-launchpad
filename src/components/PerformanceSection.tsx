@@ -19,7 +19,7 @@ const PerformanceSection = () => {
           backgroundAttachment: 'fixed',
         }}
       >
-        <div className="absolute inset-0 bg-primary/90" />
+        <div className="absolute inset-0 bg-[#1a1a1a]/90" />
       </div>
 
       {/* Content */}
@@ -28,7 +28,7 @@ const PerformanceSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Doing the right thing, at the right time.
           </h2>
-          <div className="h-1 w-24 bg-accent mx-auto"></div>
+          <div className="h-1 w-24 bg-[#ff6b35] mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
