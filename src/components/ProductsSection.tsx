@@ -1,12 +1,12 @@
 import ProductCard from "./ProductCard";
-import silicaImage from "@/assets/silica-sand.jpg";
-import kaolinImage from "@/assets/kaolin.jpg";
+import silicaImage from "@/assets/silica-sand-solar.jpg";
+import kaolinImage from "@/assets/kaolin-paper.jpg";
 import oilBoostImage from "@/assets/oil-boost.jpg";
-import quartzImage from "@/assets/quartz.jpg";
-import catalystImage from "@/assets/clay-catalyst.jpg";
-import feldsparImage from "@/assets/feldspar.jpg";
-import agricultureImage from "@/assets/agriculture.jpg";
-import drillingImage from "@/assets/drilling.jpg";
+import quartzImage from "@/assets/quartz-samples.jpg";
+import catalystImage from "@/assets/clay-catalyst-tower.jpg";
+import feldsparImage from "@/assets/feldspar-minerals.jpg";
+import agricultureImage from "@/assets/agriculture-spray.jpg";
+import drillingImage from "@/assets/drilling-platform.jpg";
 
 const ProductsSection = () => {
   const products = [

@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import agricultureImage from "@/assets/agriculture.jpg";
+import agroflexProduct from "@/assets/agroflex-product.jpg";
+import plantShieldProduct from "@/assets/plant-shield-product.jpg";
 
 const Agriculture = () => {
   const agroFlexBenefits = [
@@ -77,7 +79,7 @@ const Agriculture = () => {
             </div>
             <div className="relative">
               <img
-                src={agricultureImage}
+                src={agroflexProduct}
                 alt="AgroFlex Product"
                 className="w-full rounded-lg shadow-xl"
               />
@@ -120,7 +122,7 @@ const Agriculture = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <img
-                src={agricultureImage}
+                src={plantShieldProduct}
                 alt="Plant Shield Product"
                 className="w-full rounded-lg shadow-xl"
               />

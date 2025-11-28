@@ -1,6 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import quartzImage from "@/assets/quartz.jpg";
+import quartzMain from "@/assets/quartz-main.jpg";
+import quartzGrade1 from "@/assets/quartz-grade-1.jpg";
+import quartzGrade2 from "@/assets/quartz-grade-2.jpg";
+import quartzGrade3 from "@/assets/quartz-grade-3.jpg";
+import quartzPowder from "@/assets/quartz-powder.jpg";
 
 const Quartz = () => {
   const grades = [
@@ -59,7 +64,7 @@ const Quartz = () => {
             </div>
             <div className="relative">
               <img
-                src={quartzImage}
+                src={quartzMain}
                 alt="Quartz"
                 className="w-full rounded-lg shadow-xl"
               />
@@ -72,19 +77,22 @@ const Quartz = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {grades.map((grade, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-white rounded-full w-48 h-48 mx-auto flex items-center justify-center shadow-lg mb-4 overflow-hidden">
-                  <img
-                    src={quartzImage}
-                    alt={grade.name}
-                    className="w-full h-full object-cover"
-                  />
+            {grades.map((grade, index) => {
+              const gradeImages = [quartzGrade1, quartzGrade2, quartzGrade3, quartzPowder];
+              return (
+                <div key={index} className="text-center">
+                  <div className="bg-white rounded-full w-48 h-48 mx-auto flex items-center justify-center shadow-lg mb-4 overflow-hidden">
+                    <img
+                      src={gradeImages[index]}
+                      alt={grade.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900">{grade.size}</h4>
+                  <p className="text-gray-700">{grade.name}</p>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900">{grade.size}</h4>
-                <p className="text-gray-700">{grade.name}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
           <div className="text-center mt-12">
             <p className="text-gray-700">

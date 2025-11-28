@@ -1,6 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import silicaSandImage from "@/assets/silica-sand.jpg";
+import constructionGradeImage from "@/assets/construction-grade.jpg";
+import magnetGradeImage from "@/assets/magnet-grade.jpg";
+import glassMakingImage from "@/assets/glass-making.jpg";
 
 const SilicaSand = () => {
   const benefits = [
@@ -127,7 +130,7 @@ const SilicaSand = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
               <img
-                src={silicaSandImage}
+                src={constructionGradeImage}
                 alt="Construction Grade"
                 className="w-full rounded-lg shadow-lg mb-4"
               />
@@ -135,7 +138,7 @@ const SilicaSand = () => {
             </div>
             <div className="text-center">
               <img
-                src={silicaSandImage}
+                src={magnetGradeImage}
                 alt="Magnet Grade"
                 className="w-full rounded-lg shadow-lg mb-4"
               />
@@ -196,14 +199,14 @@ const SilicaSand = () => {
                 from the sand mold and brush away any remaining sand.
               </p>
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
+                src={glassMakingImage}
                 alt="Glass Making"
                 className="w-full rounded-lg shadow-xl mt-6"
               />
             </div>
             <div className="space-y-6">
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800"
+                src={glassMakingImage}
                 alt="Industrial Application"
                 className="w-full rounded-lg shadow-xl"
               />

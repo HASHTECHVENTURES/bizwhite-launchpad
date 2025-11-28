@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import feldsparImage from "@/assets/feldspar.jpg";
+import feldsparPotashGrits from "@/assets/feldspar-potash-grits.jpg";
+import feldsparSodaPowder from "@/assets/feldspar-soda-powder.jpg";
 
 const Feldspar = () => {
   return (
@@ -86,7 +88,7 @@ const Feldspar = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
               <img
-                src={feldsparImage}
+                src={feldsparPotashGrits}
                 alt="Potash Feldspar Grits"
                 className="w-full rounded-lg shadow-xl mb-4"
               />
@@ -94,7 +96,7 @@ const Feldspar = () => {
             </div>
             <div className="text-center">
               <img
-                src={feldsparImage}
+                src={feldsparSodaPowder}
                 alt="Soda Feldspar Powder"
                 className="w-full rounded-lg shadow-xl mb-4"
               />

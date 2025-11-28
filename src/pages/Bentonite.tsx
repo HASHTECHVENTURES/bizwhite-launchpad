@@ -4,6 +4,7 @@ import oilBoostImage from "@/assets/oil-boost.jpg";
 import drillingImage from "@/assets/drilling.jpg";
 import agricultureImage from "@/assets/agriculture.jpg";
 import clayCatalystImage from "@/assets/clay-catalyst.jpg";
+import bentoniteOverview from "@/assets/bentonite-overview.jpg";
 
 const Bentonite = () => {
   return (
@@ -61,7 +62,7 @@ const Bentonite = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
+                src={bentoniteOverview}
                 alt="Bentonite"
                 className="w-full rounded-lg shadow-xl"
               />

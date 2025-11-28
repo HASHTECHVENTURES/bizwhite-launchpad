@@ -1,6 +1,10 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import kaolinImage from "@/assets/kaolin.jpg";
+import kaolinWhiteUltra from "@/assets/kaolin-white-ultra.jpg";
+import kaolinPaperRolls from "@/assets/kaolin-paper-rolls.jpg";
+import kaolinCeramics from "@/assets/kaolin-ceramics.jpg";
+import kaolinPowderExact from "@/assets/kaolin-powder-exact.jpg";
 
 const Kaolin = () => {
   const applications = [
@@ -58,7 +62,7 @@ const Kaolin = () => {
             </div>
             <div className="relative">
               <img
-                src={kaolinImage}
+                src={kaolinWhiteUltra}
                 alt="Kaolin China Clay"
                 className="w-full rounded-lg shadow-xl"
               />
@@ -73,7 +77,7 @@ const Kaolin = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800"
+                src={kaolinPaperRolls}
                 alt="Paper Manufacturing"
                 className="w-full rounded-lg shadow-xl"
               />
@@ -133,7 +137,7 @@ const Kaolin = () => {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800"
+                src={kaolinCeramics}
                 alt="Ceramics"
                 className="w-full rounded-lg shadow-xl"
               />
@@ -148,7 +152,7 @@ const Kaolin = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <img
-                src={kaolinImage}
+                src={kaolinPowderExact}
                 alt="Kaolin Powder"
                 className="w-full rounded-lg shadow-xl"
               />

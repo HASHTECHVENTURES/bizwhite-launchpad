@@ -2,6 +2,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle } from "lucide-react";
 import factoryImage from "@/assets/hero-factory.jpg";
+import bizwhiteFacility from "@/assets/bizwhite-facility.jpg";
+import isoCertificate from "@/assets/iso-certificate.png";
+import dunsCertificate from "@/assets/duns-certificate.png";
+import fieoCertificate from "@/assets/fieo-certificate.png";
 
 const AboutUs = () => {
   const whyBizWhite = [
@@ -22,7 +26,7 @@ const AboutUs = () => {
       <section
         className="relative pt-32 pb-20 bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${factoryImage})`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${bizwhiteFacility})`,
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,10 +67,67 @@ const AboutUs = () => {
             </div>
             <div className="relative">
               <img
-                src={factoryImage}
+                src={bizwhiteFacility}
                 alt="BizWhite Mines Facility"
                 className="w-full rounded-lg shadow-xl border-4 border-primary"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Certifications
+            </h2>
+            <div className="h-1 w-24 bg-primary mx-auto mb-6"></div>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              BizWhite Mines maintains the highest standards of quality and compliance, 
+              certified by internationally recognized organizations.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* ISO Certificate */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col items-center">
+              <div className="mb-4">
+                <img
+                  src={isoCertificate}
+                  alt="ISO 9001:2015 Certificate"
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 text-center">ISO 9001:2015</h3>
+              <p className="text-gray-600 text-center mt-2">Quality Management System</p>
+            </div>
+
+            {/* DUNS Certificate */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col items-center justify-center">
+              <div className="mb-4">
+                <img
+                  src={dunsCertificate}
+                  alt="DUNS Registered"
+                  className="w-64 h-auto"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 text-center">DUNS Registered</h3>
+              <p className="text-gray-600 text-center mt-2">Dun & Bradstreet Verification</p>
+            </div>
+
+            {/* FIEO Certificate */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col items-center justify-center">
+              <div className="mb-4">
+                <img
+                  src={fieoCertificate}
+                  alt="FIEO Member"
+                  className="w-64 h-auto"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 text-center">FIEO Member</h3>
+              <p className="text-gray-600 text-center mt-2">Federation of Indian Export Organisations</p>
             </div>
           </div>
         </div>
