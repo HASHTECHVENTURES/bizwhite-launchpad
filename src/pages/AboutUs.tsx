@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle } from "lucide-react";
 import factoryImage from "@/assets/hero-factory.jpg";
+import bizwhiteFacility from "@/assets/bizwhite-facility.jpg";
 
 const AboutUs = () => {
   const whyBizWhite = [
@@ -22,7 +23,7 @@ const AboutUs = () => {
       <section
         className="relative pt-32 pb-20 bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${factoryImage})`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${bizwhiteFacility})`,
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,7 +64,7 @@ const AboutUs = () => {
             </div>
             <div className="relative">
               <img
-                src={factoryImage}
+                src={bizwhiteFacility}
                 alt="BizWhite Mines Facility"
                 className="w-full rounded-lg shadow-xl border-4 border-primary"
               />
