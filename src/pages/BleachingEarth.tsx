@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import oilBoostImage from "@/assets/oil-boost.jpg";
+import bleachingEarthPowder from "@/assets/bleaching-earth-powder.jpg";
+import oilQuality from "@/assets/oil-quality.jpg";
 
 const BleachingEarth = () => {
   const bw108Specs = [
@@ -84,7 +86,7 @@ const BleachingEarth = () => {
             </div>
             <div>
               <img
-                src={oilBoostImage}
+                src={bleachingEarthPowder}
                 alt="Bleaching Earth"
                 className="w-full rounded-lg shadow-xl"
               />
@@ -149,7 +151,7 @@ const BleachingEarth = () => {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800"
+                src={oilQuality}
                 alt="Quality Oils"
                 className="w-full rounded-lg shadow-xl"
               />

@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import clayCatalystImage from "@/assets/clay-catalyst.jpg";
+import clayCatalystGrades from "@/assets/clay-catalyst-grades.jpg";
+import clayParticleSize from "@/assets/clay-particle-size.jpg";
 
 const ClayCatalysts = () => {
   const physicalProperties = [
@@ -91,7 +93,7 @@ const ClayCatalysts = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <img
-                src={clayCatalystImage}
+                src={clayCatalystGrades}
                 alt="Clay Catalyst Grades"
                 className="w-full rounded-lg shadow-xl"
               />
@@ -175,7 +177,7 @@ const ClayCatalysts = () => {
             </div>
             <div>
               <img
-                src={clayCatalystImage}
+                src={clayParticleSize}
                 alt="Particle Distribution"
                 className="w-full rounded-lg shadow-xl"
               />
