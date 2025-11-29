@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import kaolinImage from "@/assets/kaolin-paper.jpg";
 import kaolinWhiteUltra from "@/assets/kaolin-white-ultra.jpg";
 import kaolinPaperRolls from "@/assets/kaolin-paper-rolls.jpg";
@@ -23,19 +24,7 @@ const Kaolin = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Banner */}
-      <section
-        className="relative pt-32 pb-20 bg-cover bg-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${kaolinImage})`,
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-white/80 text-sm mb-2">Home &gt; Kaolin – China Clay</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white">Kaolin – China Clay</h1>
-          <div className="h-1 w-16 bg-primary mt-4"></div>
-        </div>
-      </section>
+      <Breadcrumb pageName="Kaolin – China Clay" backgroundImage={kaolinImage} />
 
       {/* World Class Ultra White Kaolin Section */}
       <section className="py-16 bg-white">
