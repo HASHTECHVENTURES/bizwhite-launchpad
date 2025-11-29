@@ -23,7 +23,7 @@ const HighlightsSection = () => {
               backgroundImage: `url(${certificationsBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-            }}
+            } as React.CSSProperties}
           >
             <div className="absolute inset-0 bg-[#1a1a1a]/90 group-hover:bg-[#1a1a1a]/80 transition-all duration-500"></div>
             <div className="relative z-10 p-5 sm:p-6 md:p-8 flex flex-col h-full">
@@ -60,7 +60,7 @@ const HighlightsSection = () => {
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               transitionDelay: isIntersecting ? '200ms' : '0ms'
-            }}
+            } as React.CSSProperties}
           >
             <div className="absolute inset-0 bg-[#1a1a1a]/90 group-hover:bg-[#1a1a1a]/80 transition-all duration-500"></div>
             <div className="relative z-10 p-5 sm:p-6 md:p-8 flex flex-col h-full">
@@ -95,7 +95,7 @@ const HighlightsSection = () => {
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               transitionDelay: isIntersecting ? '400ms' : '0ms'
-            }}
+            } as React.CSSProperties}
           >
             <div className="absolute inset-0 bg-[#1a1a1a]/90 group-hover:bg-[#1a1a1a]/80 transition-all duration-500"></div>
             <div className="relative z-10 p-5 sm:p-6 md:p-8 flex flex-col h-full">
