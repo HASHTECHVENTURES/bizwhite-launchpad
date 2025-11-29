@@ -15,17 +15,17 @@ const HighlightsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Certifications */}
           <div
-            className="relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col animate-fade-in"
+            className="relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col animate-fade-in group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             style={{
               backgroundImage: `url(${certificationsBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="absolute inset-0 bg-[#1a1a1a]/90"></div>
+            <div className="absolute inset-0 bg-[#1a1a1a]/90 group-hover:bg-[#1a1a1a]/80 transition-all duration-500"></div>
             <div className="relative z-10 p-5 sm:p-6 md:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 md:gap-4 mb-5 sm:mb-6 md:mb-8">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale group-hover:rotate-12 transition-all duration-300">
                   <Settings className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
@@ -34,35 +34,36 @@ const HighlightsSection = () => {
               </div>
               
               <ul className="space-y-2 md:space-y-3 mb-5 sm:mb-6 md:mb-8 flex-grow">
-                <li className="text-white text-sm sm:text-base md:text-lg">ISO 9001 : 2015</li>
-                <li className="text-white text-sm sm:text-base md:text-lg">DUNS</li>
-                <li className="text-white text-sm sm:text-base md:text-lg">FIEO</li>
+                <li className="text-white text-sm sm:text-base md:text-lg transition-all duration-300 hover:translate-x-2 hover:text-[#ff6b35]">ISO 9001 : 2015</li>
+                <li className="text-white text-sm sm:text-base md:text-lg transition-all duration-300 hover:translate-x-2 hover:text-[#ff6b35]">DUNS</li>
+                <li className="text-white text-sm sm:text-base md:text-lg transition-all duration-300 hover:translate-x-2 hover:text-[#ff6b35]">FIEO</li>
               </ul>
 
               <Link 
                 to="/about" 
                 onClick={handleClick}
-                className="inline-flex items-center text-[#ff6b35] font-bold text-sm sm:text-base md:text-lg hover:underline"
+                className="inline-flex items-center text-[#ff6b35] font-bold text-sm sm:text-base md:text-lg hover:underline group/link"
               >
-                read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1" />
+                read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1 group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
 
           {/* Global Manufacturers */}
           <div
-            className="relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col animate-fade-in"
+            className="relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col animate-fade-in group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             style={{
               backgroundImage: `url(${globalInsightsBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              animationDelay: '0.1s'
             }}
           >
-            <div className="absolute inset-0 bg-[#1a1a1a]/90"></div>
+            <div className="absolute inset-0 bg-[#1a1a1a]/90 group-hover:bg-[#1a1a1a]/80 transition-all duration-500"></div>
             <div className="relative z-10 p-5 sm:p-6 md:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 md:gap-4 mb-5 sm:mb-6 md:mb-8">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale">
-                  <RefreshCw className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale group-hover:rotate-12 transition-all duration-300">
+                  <RefreshCw className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white group-hover:animate-spin" />
                 </div>
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
                   Global Manufacturers & Consumer Insights
@@ -76,26 +77,27 @@ const HighlightsSection = () => {
               <Link 
                 to="/about" 
                 onClick={handleClick}
-                className="inline-flex items-center text-[#ff6b35] font-bold text-sm sm:text-base md:text-lg hover:underline"
+                className="inline-flex items-center text-[#ff6b35] font-bold text-sm sm:text-base md:text-lg hover:underline group/link"
               >
-                read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1" />
+                read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1 group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
 
           {/* Quality Products */}
           <div
-            className="relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col md:col-span-2 lg:col-span-1 animate-fade-in"
+            className="relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col md:col-span-2 lg:col-span-1 animate-fade-in group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             style={{
               backgroundImage: `url(${qualityBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              animationDelay: '0.2s'
             }}
           >
-            <div className="absolute inset-0 bg-[#1a1a1a]/90"></div>
+            <div className="absolute inset-0 bg-[#1a1a1a]/90 group-hover:bg-[#1a1a1a]/80 transition-all duration-500"></div>
             <div className="relative z-10 p-5 sm:p-6 md:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 md:gap-4 mb-5 sm:mb-6 md:mb-8">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale group-hover:rotate-12 transition-all duration-300">
                   <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
@@ -110,9 +112,9 @@ const HighlightsSection = () => {
               <Link 
                 to="/about" 
                 onClick={handleClick}
-                className="inline-flex items-center text-[#ff6b35] font-bold text-sm sm:text-base md:text-lg hover:underline"
+                className="inline-flex items-center text-[#ff6b35] font-bold text-sm sm:text-base md:text-lg hover:underline group/link"
               >
-                read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1" />
+                read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1 group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
