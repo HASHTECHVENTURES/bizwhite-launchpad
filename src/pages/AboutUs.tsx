@@ -58,6 +58,8 @@ const AboutUs = () => {
               <img
                 src={bizwhiteFacility}
                 alt="BizWhite Mines Facility"
+                loading="lazy"
+                decoding="async"
                 className="w-full rounded-lg shadow-xl border-4 border-primary"
               />
             </div>

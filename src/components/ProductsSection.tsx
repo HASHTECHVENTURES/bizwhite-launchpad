@@ -1,3 +1,4 @@
+import { memo, useMemo } from "react";
 import ProductCard from "./ProductCard";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import silicaImage from "@/assets/silica-sand-solar.jpg";
@@ -13,7 +14,7 @@ import bentoniteImage from "@/assets/bentonite-overview.jpg";
 const ProductsSection = () => {
   const { ref: headerRef, isIntersecting: headerInView } = useIntersectionObserver({ threshold: 0.2 });
   const { ref: gridRef, isIntersecting: gridInView } = useIntersectionObserver({ threshold: 0.1 });
-  const products = [
+  const products = useMemo(() => [
     {
       title: "Silica Sand for Solar Panels",
       description: "BizWhite Silica–SG11 low iron silica sand undergoes washing, spiral magnetic separation, scrubbing and leaching to remove impurities.",
@@ -68,7 +69,7 @@ const ProductsSection = () => {
       image: drillingImage,
       href: "/oil-water-drilling",
     },
-  ];
+  ], []);
 
   return (
     <section id="products" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#1a1a1a]">
@@ -107,4 +108,4 @@ const ProductsSection = () => {
   );
 };
 
-export default ProductsSection;
+export default memo(ProductsSection);

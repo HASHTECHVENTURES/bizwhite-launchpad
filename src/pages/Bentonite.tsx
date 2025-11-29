@@ -54,6 +54,8 @@ const Bentonite = () => {
               <img
                 src={bentoniteOverview}
                 alt="Bentonite"
+                loading="lazy"
+                decoding="async"
                 className="w-full rounded-lg shadow-xl"
               />
             </div>
@@ -76,6 +78,8 @@ const Bentonite = () => {
               <img
                 src={drillingImage}
                 alt="Oil Well Drilling"
+                loading="lazy"
+                decoding="async"
                 className="w-full rounded-lg shadow-xl mb-4"
               />
               <p className="text-gray-700 leading-relaxed text-justify mb-4">
@@ -97,6 +101,8 @@ const Bentonite = () => {
               <img
                 src={agricultureImage}
                 alt="Agriculture"
+                loading="lazy"
+                decoding="async"
                 className="w-full rounded-lg shadow-xl mb-4"
               />
               <p className="text-gray-700 leading-relaxed text-justify mb-4">
@@ -117,6 +123,8 @@ const Bentonite = () => {
               <img
                 src={oilBoostImage}
                 alt="Bleaching Earth"
+                loading="lazy"
+                decoding="async"
                 className="w-full rounded-lg shadow-xl mb-4"
               />
               <p className="text-gray-700 leading-relaxed text-justify mb-4">
@@ -137,6 +145,8 @@ const Bentonite = () => {
               <img
                 src={clayCatalystImage}
                 alt="Clay Catalysts"
+                loading="lazy"
+                decoding="async"
                 className="w-full rounded-lg shadow-xl mb-4"
               />
               <p className="text-gray-700 leading-relaxed text-justify mb-4">
