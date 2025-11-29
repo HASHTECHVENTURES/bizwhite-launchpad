@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import silicaSandImage from "@/assets/silica-sand-powder.png";
+import solarPanelImage from "@/assets/silica-sand-solar.jpg";
 import constructionGradeImage from "@/assets/construction-grade.jpg";
 import magnetGradeImage from "@/assets/magnet-grade.jpg";
 import glassMakingImage from "@/assets/glass-making.jpg";
@@ -68,8 +69,8 @@ const SilicaSand = () => {
             </div>
             <div className="relative">
               <img
-                src={silicaSandImage}
-                alt="Silica Sand"
+                src={solarPanelImage}
+                alt="Solar Panel with Silica Sand"
                 className="w-full rounded-lg shadow-xl"
               />
             </div>
