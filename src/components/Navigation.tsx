@@ -30,7 +30,9 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center gap-2">
-              <img src={logo} alt="BizWhite Logo" className="h-12 w-auto" />
+              <div className="bg-white px-3 py-2 rounded">
+                <img src={logo} alt="BizWhite Logo" className="h-10 w-auto" />
+              </div>
             </Link>
           </div>
 
