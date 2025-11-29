@@ -1,21 +1,24 @@
 import { Settings, RefreshCw, CheckCircle, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import certificationsBg from "@/assets/certifications-bg.png";
 import globalInsightsBg from "@/assets/global-insights-bg.png";
 import qualityBg from "@/assets/quality-bg.png";
 
 const HighlightsSection = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
+  
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
 
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Certifications */}
           <div
-            className="relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col animate-fade-in group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            className={`relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col group hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 ${isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
             style={{
               backgroundImage: `url(${certificationsBg})`,
               backgroundSize: 'cover',
@@ -51,12 +54,12 @@ const HighlightsSection = () => {
 
           {/* Global Manufacturers */}
           <div
-            className="relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col animate-fade-in group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            className={`relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col group hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 ${isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
             style={{
               backgroundImage: `url(${globalInsightsBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              animationDelay: '0.1s'
+              transitionDelay: isIntersecting ? '200ms' : '0ms'
             }}
           >
             <div className="absolute inset-0 bg-[#1a1a1a]/90 group-hover:bg-[#1a1a1a]/80 transition-all duration-500"></div>
@@ -86,12 +89,12 @@ const HighlightsSection = () => {
 
           {/* Quality Products */}
           <div
-            className="relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col md:col-span-2 lg:col-span-1 animate-fade-in group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            className={`relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col md:col-span-2 lg:col-span-1 group hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 ${isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
             style={{
               backgroundImage: `url(${qualityBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              animationDelay: '0.2s'
+              transitionDelay: isIntersecting ? '400ms' : '0ms'
             }}
           >
             <div className="absolute inset-0 bg-[#1a1a1a]/90 group-hover:bg-[#1a1a1a]/80 transition-all duration-500"></div>
