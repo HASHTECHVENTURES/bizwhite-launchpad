@@ -28,7 +28,7 @@ const HighlightsSection = () => {
                 <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale group-hover:rotate-12 transition-all duration-300">
                   <Settings className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
                   Certifications
                 </h3>
               </div>
@@ -65,7 +65,7 @@ const HighlightsSection = () => {
                 <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale group-hover:rotate-12 transition-all duration-300">
                   <RefreshCw className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white group-hover:animate-spin" />
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
                   Global Manufacturers & Consumer Insights
                 </h3>
               </div>
@@ -100,7 +100,7 @@ const HighlightsSection = () => {
                 <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale group-hover:rotate-12 transition-all duration-300">
                   <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
                   Quality Products
                 </h3>
               </div>
