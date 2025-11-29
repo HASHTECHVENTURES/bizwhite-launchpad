@@ -1,5 +1,5 @@
 import ProductCard from "./ProductCard";
-import silicaImage from "@/assets/silica-sand-solar.jpg";
+import silicaImage from "@/assets/silica-sand-powder.png";
 import kaolinImage from "@/assets/kaolin-paper.jpg";
 import oilBoostImage from "@/assets/oil-boost.jpg";
 import quartzImage from "@/assets/quartz-samples.jpg";
