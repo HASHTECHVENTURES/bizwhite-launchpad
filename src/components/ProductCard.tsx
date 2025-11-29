@@ -19,7 +19,7 @@ const ProductCard = ({ title, description, image, href }: ProductCardProps) => {
   };
 
   return (
-    <Card className="overflow-hidden group hover:shadow-2xl transition-all duration-500 border-2 border-gray-700 hover:border-[#ff6b35] bg-white animate-fade-in hover:-translate-y-2">
+    <Card className="overflow-hidden group hover:shadow-2xl transition-all duration-500 border-2 border-gray-700 hover:border-[#ff6b35] bg-white hover:-translate-y-2">
       <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
         <img
           src={image}
