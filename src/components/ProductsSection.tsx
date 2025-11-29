@@ -68,22 +68,22 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section id="products" className="py-24 bg-[#1a1a1a]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-block bg-[#ff6b35] text-white px-4 py-1 text-sm font-semibold mb-4">
+    <section id="products" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#1a1a1a]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-block bg-[#ff6b35] text-white px-3 sm:px-4 py-1 text-xs sm:text-sm font-semibold mb-3 sm:mb-4 animate-fade-in">
             Our Services
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 animate-fade-in">
             Tailored Mining Services for Every Venture
           </h2>
-          <div className="h-1 w-24 bg-[#ff6b35] mx-auto mb-6"></div>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <div className="h-1 w-20 sm:w-24 bg-[#ff6b35] mx-auto mb-4 sm:mb-6 animate-fade-in"></div>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 max-w-2xl lg:max-w-3xl mx-auto animate-fade-in">
             Premium industrial minerals serving diverse global industries
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-6 sm:gap-8">
           {products.map((product, index) => (
             <ProductCard
               key={index}

@@ -119,4 +119,38 @@ All colors MUST be HSL.
     font-family: 'Poppins', system-ui, -apple-system, sans-serif;
     font-weight: 700;
   }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better image rendering */
+  img {
+    @apply max-w-full h-auto;
+  }
+  
+  /* Responsive container improvements for ultra-wide screens */
+  @media (min-width: 1920px) {
+    .max-w-7xl {
+      max-width: 1600px;
+    }
+  }
+  
+  @media (min-width: 2560px) {
+    .max-w-7xl {
+      max-width: 2000px;
+    }
+  }
+  
+  /* Text should not be too wide on large screens */
+  p {
+    max-width: 75ch;
+  }
+  
+  /* Better responsive images */
+  picture, 
+  video {
+    @apply block w-full;
+  }
 }
