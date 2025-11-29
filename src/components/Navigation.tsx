@@ -24,13 +24,13 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-[#1a1a1a] backdrop-blur-sm border-b border-gray-800 z-50">
+    <nav className="fixed top-0 w-full bg-[#1a1a1a] backdrop-blur-sm border-b border-gray-800 z-50 animate-fade-in">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="bg-white px-2 sm:px-3 py-1.5 sm:py-2 rounded">
+            <Link to="/" className="flex items-center gap-2 hover-scale">
+              <div className="bg-white px-2 sm:px-3 py-1.5 sm:py-2 rounded transition-transform duration-300">
                 <img src={logo} alt="BizWhite Logo" className="h-8 sm:h-10 w-auto" />
               </div>
             </Link>
@@ -38,10 +38,10 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <Link to="/" className="text-white/90 hover:text-[#ff6b35] transition-colors font-medium text-sm xl:text-base">
+            <Link to="/" className="text-white/90 hover:text-[#ff6b35] transition-all duration-300 font-medium text-sm xl:text-base relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#ff6b35] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
               Home
             </Link>
-            <Link to="/about" className="text-white/90 hover:text-[#ff6b35] transition-colors font-medium text-sm xl:text-base">
+            <Link to="/about" className="text-white/90 hover:text-[#ff6b35] transition-all duration-300 font-medium text-sm xl:text-base relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#ff6b35] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
               About Us
             </Link>
             
@@ -54,11 +54,11 @@ const Navigation = () => {
                 setBentoniteOpen(false);
               }}
             >
-              <button className="flex items-center text-white/90 hover:text-[#ff6b35] transition-colors font-medium py-2 text-sm xl:text-base">
-                Products <ChevronDown className="ml-1 h-4 w-4" />
+              <button className="flex items-center text-white/90 hover:text-[#ff6b35] transition-all duration-300 font-medium py-2 text-sm xl:text-base">
+                Products <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-300 ${productsOpen ? 'rotate-180' : ''}`} />
               </button>
-              <div className={`absolute top-full left-0 pt-2 ${productsOpen ? 'block' : 'hidden'}`}>
-                <div className="w-[260px] xl:w-[280px] bg-[#2a2a2a] rounded-lg shadow-xl border border-gray-700 py-2 z-50">
+              <div className={`absolute top-full left-0 pt-2 transition-all duration-300 ${productsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
+                <div className="w-[260px] xl:w-[280px] bg-[#2a2a2a] rounded-lg shadow-xl border border-gray-700 py-2 z-50 animate-fade-in">
                   {products.map((product) => (
                     <Link
                       key={product.name}
@@ -117,15 +117,15 @@ const Navigation = () => {
               </div>
             </div>
 
-            <Link to="/contact" className="text-white/90 hover:text-[#ff6b35] transition-colors font-medium text-sm xl:text-base">
+            <Link to="/contact" className="text-white/90 hover:text-[#ff6b35] transition-all duration-300 font-medium text-sm xl:text-base relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#ff6b35] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
               Contact Us
             </Link>
             
-            <Button asChild variant="default" className="bg-[#ff6b35] hover:bg-[#ff5722] text-white text-sm xl:text-base">
+            <Button asChild variant="default" className="bg-[#ff6b35] hover:bg-[#ff5722] text-white text-sm xl:text-base hover-scale transition-all duration-300">
               <Link to="/contact">Contact Us</Link>
             </Button>
             
-            <button className="text-white/90 hover:text-[#ff6b35] transition-colors">
+            <button className="text-white/90 hover:text-[#ff6b35] transition-all duration-300 hover:rotate-12 hover:scale-110">
               <Search className="h-4 w-4 xl:h-5 xl:w-5" />
             </button>
           </div>
@@ -146,7 +146,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-800 bg-[#1a1a1a] max-h-[calc(100vh-5rem)] overflow-y-auto">
+          <div className="lg:hidden py-4 border-t border-gray-800 bg-[#1a1a1a] max-h-[calc(100vh-5rem)] overflow-y-auto animate-slide-in-right">
             <div className="flex flex-col space-y-3 sm:space-y-4">
               <Link to="/" className="text-white/90 hover:text-[#ff6b35] transition-colors font-medium text-sm sm:text-base" onClick={() => setMobileMenuOpen(false)}>
                 Home

@@ -33,11 +33,11 @@ const PerformanceSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-3 sm:mb-4 hover-scale">
+            <div key={index} className="text-center animate-fade-in group cursor-pointer" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-3 sm:mb-4 transition-all duration-500 group-hover:scale-110 group-hover:text-[#ff6b35]">
                 {stat.value}
               </div>
-              <div className="text-lg sm:text-xl md:text-2xl text-white/90 font-medium">
+              <div className="text-lg sm:text-xl md:text-2xl text-white/90 font-medium transition-all duration-300 group-hover:text-white">
                 {stat.label}
               </div>
             </div>
