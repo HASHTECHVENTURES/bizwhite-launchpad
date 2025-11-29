@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import feldsparImage from "@/assets/feldspar.jpg";
+import feldsparImage from "@/assets/feldspar-minerals.jpg";
 import feldsparPotashGrits from "@/assets/feldspar-potash-grits.jpg";
 import feldsparSodaPowder from "@/assets/feldspar-soda-powder.jpg";
 

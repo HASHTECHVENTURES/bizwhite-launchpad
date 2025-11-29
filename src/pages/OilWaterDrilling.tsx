@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import drillingImage from "@/assets/drilling.jpg";
+import drillingImage from "@/assets/drilling-platform.jpg";
 import bentoniteImage from "@/assets/bentonite.jpg";
 import bentoniteApiBw12 from "@/assets/bentonite-api-bw12.jpg";
 import drillingPlatform from "@/assets/drilling-platform.jpg";

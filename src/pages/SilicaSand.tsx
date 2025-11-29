@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import silicaSandImage from "@/assets/silica-sand.jpg";
+import silicaSandImage from "@/assets/silica-sand-solar.jpg";
 import constructionGradeImage from "@/assets/construction-grade.jpg";
 import magnetGradeImage from "@/assets/magnet-grade.jpg";
 import glassMakingImage from "@/assets/glass-making.jpg";

@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import kaolinImage from "@/assets/kaolin.jpg";
+import kaolinImage from "@/assets/kaolin-paper.jpg";
 import kaolinWhiteUltra from "@/assets/kaolin-white-ultra.jpg";
 import kaolinPaperRolls from "@/assets/kaolin-paper-rolls.jpg";
 import kaolinCeramics from "@/assets/kaolin-ceramics.jpg";

@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import clayCatalystImage from "@/assets/clay-catalyst.jpg";
+import clayCatalystImage from "@/assets/clay-catalyst-tower.jpg";
 import clayCatalystGrades from "@/assets/clay-catalyst-grades.jpg";
 import clayParticleSize from "@/assets/clay-particle-size.jpg";
 

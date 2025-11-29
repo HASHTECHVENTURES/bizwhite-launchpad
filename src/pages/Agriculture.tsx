@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import agricultureImage from "@/assets/agriculture.jpg";
+import agricultureImage from "@/assets/agriculture-spray.jpg";
 import agroflexProduct from "@/assets/agroflex-product.jpg";
 import plantShieldProduct from "@/assets/plant-shield-product.jpg";
 
