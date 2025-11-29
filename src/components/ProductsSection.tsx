@@ -7,6 +7,7 @@ import catalystImage from "@/assets/clay-catalyst-tower.jpg";
 import feldsparImage from "@/assets/feldspar-minerals.jpg";
 import agricultureImage from "@/assets/agriculture-spray.jpg";
 import drillingImage from "@/assets/drilling-platform.jpg";
+import bentoniteImage from "@/assets/bentonite-overview.jpg";
 
 const ProductsSection = () => {
   const products = [
@@ -51,6 +52,12 @@ const ProductsSection = () => {
       description: "Minerals for home gardens and agriculture farming.",
       image: agricultureImage,
       href: "/agriculture",
+    },
+    {
+      title: "Bentonite",
+      description: "Versatile clay mineral used in oil & water drilling, agriculture, construction, and various industrial applications.",
+      image: bentoniteImage,
+      href: "/bentonite",
     },
     {
       title: "Oil Well Drilling Grade Bentonite",

@@ -129,19 +129,25 @@ const SilicaSand = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
-              <img
-                src={constructionGradeImage}
-                alt="Construction Grade"
-                className="w-full rounded-lg shadow-lg mb-4"
-              />
+              <div className="w-full max-w-md mx-auto rounded-lg shadow-lg mb-4 overflow-hidden aspect-square">
+                <img
+                  src={constructionGradeImage}
+                  alt="Construction Grade"
+                  className="w-[200%] h-[120%] object-cover"
+                  style={{ objectPosition: 'left top' }}
+                />
+              </div>
               <h4 className="text-xl font-bold text-gray-900">Construction Grade</h4>
             </div>
             <div className="text-center">
-              <img
-                src={magnetGradeImage}
-                alt="Magnet Grade"
-                className="w-full rounded-lg shadow-lg mb-4"
-              />
+              <div className="w-full max-w-md mx-auto rounded-lg shadow-lg mb-4 overflow-hidden aspect-square">
+                <img
+                  src={magnetGradeImage}
+                  alt="Magnet Grade"
+                  className="w-[200%] h-[120%] object-cover"
+                  style={{ objectPosition: 'right top' }}
+                />
+              </div>
               <h4 className="text-xl font-bold text-gray-900">Magnet Grade</h4>
             </div>
           </div>
@@ -206,8 +212,8 @@ const SilicaSand = () => {
             </div>
             <div className="space-y-6">
               <img
-                src={glassMakingImage}
-                alt="Industrial Application"
+                src="https://www.bizwhite.com/wp-content/uploads/2024/11/silica-sand-for-bathroom-fitting-flooring-tiles.jpg"
+                alt="Silica Sand for Bathroom Fitting and Flooring Tiles"
                 className="w-full rounded-lg shadow-xl"
               />
               <p className="text-gray-700 leading-relaxed text-justify">
@@ -310,5 +316,6 @@ const SilicaSand = () => {
 };
 
 export default SilicaSand;
+
 
 

@@ -73,18 +73,37 @@ const Navigation = () => {
                     onMouseEnter={() => setBentoniteOpen(true)}
                     onMouseLeave={() => setBentoniteOpen(false)}
                   >
-                    <div className="flex items-center justify-between px-4 py-2 text-sm text-white/90 hover:bg-[#ff6b35] hover:text-white transition-colors cursor-pointer">
-                      <Link to="/bentonite" onClick={() => setProductsOpen(false)}>Bentonite</Link>
+                    <div 
+                      className="flex items-center justify-between px-4 py-2 text-sm text-white/90 hover:bg-[#ff6b35] hover:text-white transition-colors cursor-pointer"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setBentoniteOpen(!bentoniteOpen);
+                      }}
+                    >
+                      <span>Bentonite</span>
                       <ChevronRight className="h-4 w-4" />
                     </div>
                     <div className={`absolute right-full top-0 pr-1 ${bentoniteOpen ? 'block' : 'hidden'}`}>
                       <div className="w-[200px] bg-[#2a2a2a] rounded-lg shadow-xl border border-gray-700 py-2 z-50">
+                        <Link
+                          to="/bentonite"
+                          className="block px-4 py-2 text-sm text-white/90 hover:bg-[#ff6b35] hover:text-white transition-colors"
+                          onClick={() => {
+                            setProductsOpen(false);
+                            setBentoniteOpen(false);
+                          }}
+                        >
+                          Bentonite Overview
+                        </Link>
                         {bentoniteSubmenu.map((item) => (
                           <Link
                             key={item.name}
                             to={item.href}
                             className="block px-4 py-2 text-sm text-white/90 hover:bg-[#ff6b35] hover:text-white transition-colors"
-                            onClick={() => setProductsOpen(false)}
+                            onClick={() => {
+                              setProductsOpen(false);
+                              setBentoniteOpen(false);
+                            }}
                           >
                             {item.name}
                           </Link>

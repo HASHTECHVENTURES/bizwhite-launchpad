@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const productLinks = [
-    "Silica Sand",
-    "Clay Catalysts",
-    "Feldspar",
-    "Kaolin – China Clay",
-    "Quartz",
-    "Bleaching Earth",
-    "Agriculture",
-    "Oil Well Drilling",
+    { name: "Silica Sand", href: "/silica-sand" },
+    { name: "Kaolin", href: "/kaolin" },
+    { name: "Bleaching Earth", href: "/bleaching-earth" },
+    { name: "Quartz", href: "/quartz" },
+    { name: "Clay Catalysts", href: "/clay-catalysts" },
+    { name: "Feldspar", href: "/feldspar" },
+    { name: "Agriculture", href: "/agriculture" },
+    { name: "Bentonite", href: "/bentonite" },
+    { name: "Oil & Water Drilling", href: "/oil-water-drilling" },
   ];
 
   return (
@@ -43,10 +44,10 @@ const Footer = () => {
               {productLinks.map((product, index) => (
                 <li key={index}>
                   <Link
-                    to="#products"
+                    to={product.href}
                     className="text-white/80 hover:text-[#ff6b35] transition-colors"
                   >
-                    {product}
+                    {product.name}
                   </Link>
                 </li>
               ))}

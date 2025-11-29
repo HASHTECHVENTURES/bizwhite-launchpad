@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle } from "lucide-react";
-import factoryImage from "@/assets/hero-factory.jpg";
 import bizwhiteFacility from "@/assets/bizwhite-facility.jpg";
 import isoCertificate from "@/assets/iso-certificate.png";
 import dunsCertificate from "@/assets/duns-certificate.png";
@@ -24,10 +23,7 @@ const AboutUs = () => {
 
       {/* Hero Banner */}
       <section
-        className="relative pt-32 pb-20 bg-cover bg-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${bizwhiteFacility})`,
-        }}
+        className="relative pt-32 pb-20 bg-[#1a1a1a]"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-white/80 text-sm mb-2">Home &gt; About Us</p>
@@ -135,10 +131,7 @@ const AboutUs = () => {
 
       {/* Why BizWhite Mines Section */}
       <section
-        className="py-20 bg-cover bg-center bg-fixed"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url(${factoryImage})`,
-        }}
+        className="py-20 bg-[#1a1a1a]"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
@@ -246,5 +239,6 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
 
 
