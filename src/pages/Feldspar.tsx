@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import feldsparImage from "@/assets/feldspar.jpg";
 import feldsparPotashGrits from "@/assets/feldspar-potash-grits.jpg";
 import feldsparSodaPowder from "@/assets/feldspar-soda-powder.jpg";
@@ -8,6 +9,7 @@ const Feldspar = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+<<<<<<< HEAD
 
       {/* Hero Banner */}
       <section
@@ -22,6 +24,9 @@ const Feldspar = () => {
           <div className="h-1 w-16 bg-primary mt-4"></div>
         </div>
       </section>
+=======
+      <Breadcrumb pageName="Feldspar" />
+>>>>>>> 5f3bcd8ac49ce0ea3896c5b879dffe7cc2f98b79
 
       {/* Potash & Soda Feldspar Section */}
       <section className="py-16 bg-white">

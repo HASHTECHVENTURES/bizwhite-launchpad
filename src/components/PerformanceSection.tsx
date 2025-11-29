@@ -23,21 +23,21 @@ const PerformanceSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 animate-fade-in">
             Doing the right thing, at the right time.
           </h2>
-          <div className="h-1 w-24 bg-[#ff6b35] mx-auto"></div>
+          <div className="h-1 w-20 sm:w-24 bg-[#ff6b35] mx-auto animate-fade-in"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-6xl md:text-7xl font-bold text-white mb-4">
+            <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-3 sm:mb-4 hover-scale">
                 {stat.value}
               </div>
-              <div className="text-xl text-white/90 font-medium">
+              <div className="text-lg sm:text-xl md:text-2xl text-white/90 font-medium">
                 {stat.label}
               </div>
             </div>

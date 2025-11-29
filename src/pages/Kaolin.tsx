@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import kaolinImage from "@/assets/kaolin.jpg";
 import kaolinWhiteUltra from "@/assets/kaolin-white-ultra.jpg";
 import kaolinPaperRolls from "@/assets/kaolin-paper-rolls.jpg";
@@ -22,6 +23,7 @@ const Kaolin = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+<<<<<<< HEAD
 
       {/* Hero Banner */}
       <section
@@ -36,6 +38,9 @@ const Kaolin = () => {
           <div className="h-1 w-16 bg-primary mt-4"></div>
         </div>
       </section>
+=======
+      <Breadcrumb pageName="Kaolin – China Clay" />
+>>>>>>> 5f3bcd8ac49ce0ea3896c5b879dffe7cc2f98b79
 
       {/* World Class Ultra White Kaolin Section */}
       <section className="py-16 bg-white">

@@ -16,12 +16,12 @@ const Footer = () => {
 
   return (
     <footer id="contact" className="bg-[#1a1a1a] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
           {/* About Section */}
           <div className="lg:col-span-2">
-            <h2 className="text-2xl font-bold mb-4">BizWhite</h2>
-            <p className="text-white/80 leading-relaxed mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">BizWhite</h2>
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed mb-4 sm:mb-6">
               BizWhite is a distinguished manufacturer, exporter & supplier of minerals serving industries like Oil & Gas, Steel, Cement, Fertilizer, Ceramics, Pharmaceuticals, Paints, Cosmetics, Edible Oil and more.
             </p>
             <div className="flex gap-4">
@@ -39,7 +39,7 @@ const Footer = () => {
 
           {/* Products Section */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Products</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Products</h3>
             <ul className="space-y-3">
               {productLinks.map((product, index) => (
                 <li key={index}>
@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Quick Links</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/" className="text-white/80 hover:text-[#ff6b35] transition-colors">

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import oilBoostImage from "@/assets/oil-boost.jpg";
 import bleachingEarthPowder from "@/assets/bleaching-earth-powder.jpg";
 import oilQuality from "@/assets/oil-quality.jpg";
@@ -48,6 +49,7 @@ const BleachingEarth = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+<<<<<<< HEAD
 
       {/* Hero Banner */}
       <section
@@ -61,6 +63,9 @@ const BleachingEarth = () => {
           <div className="h-1 w-16 bg-primary mt-4"></div>
         </div>
       </section>
+=======
+      <Breadcrumb pageName="Bleaching Earth" />
+>>>>>>> 5f3bcd8ac49ce0ea3896c5b879dffe7cc2f98b79
 
       {/* BizWhite Oil Boost Intro */}
       <section className="py-16 bg-primary text-white">
