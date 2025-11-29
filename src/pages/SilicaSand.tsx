@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import silicaSandImage from "@/assets/silica-sand.jpg";
 import constructionGradeImage from "@/assets/construction-grade.jpg";
 import magnetGradeImage from "@/assets/magnet-grade.jpg";
@@ -36,19 +37,7 @@ const SilicaSand = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-
-      {/* Hero Banner */}
-      <section
-        className="relative pt-32 pb-20 bg-cover bg-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920')`,
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">Silica Sand</h1>
-          <div className="h-1 w-16 bg-primary mt-4"></div>
-        </div>
-      </section>
+      <Breadcrumb pageName="Silica Sand" />
 
       {/* BizWhite Silica-SG11 Section */}
       <section className="py-16 bg-white">

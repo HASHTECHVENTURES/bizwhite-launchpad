@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import clayCatalystImage from "@/assets/clay-catalyst.jpg";
 import clayCatalystGrades from "@/assets/clay-catalyst-grades.jpg";
 import clayParticleSize from "@/assets/clay-particle-size.jpg";
@@ -23,20 +24,7 @@ const ClayCatalysts = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-
-      {/* Hero Banner */}
-      <section
-        className="relative pt-32 pb-20 bg-cover bg-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920')`,
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-white/80 text-sm mb-2">Home &gt; Clay Catalysts</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white">Clay Catalysts</h1>
-          <div className="h-1 w-16 bg-primary mt-4"></div>
-        </div>
-      </section>
+      <Breadcrumb pageName="Clay Catalysts" />
 
       {/* BW-Clay Catalyst Section */}
       <section className="py-16 bg-white">
