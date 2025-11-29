@@ -6,7 +6,7 @@ import quartzMain from "@/assets/quartz-samples.jpg";
 import quartzGrade1 from "@/assets/quartz-grade-1.jpg";
 import quartzGrade2 from "@/assets/quartz-grade-2.jpg";
 import quartzGrade3 from "@/assets/quartz-grade-3.jpg";
-import quartzPowder from "@/assets/quartz-bathroom-application.png";
+import quartzPowder from "@/assets/quartz-powder.jpg";
 
 const Quartz = () => {
   const grades = [
