@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
 import quartzImage from "@/assets/quartz.jpg";
 import quartzMain from "@/assets/quartz-main.jpg";
 import quartzGrade1 from "@/assets/quartz-grade-1.jpg";
@@ -19,7 +18,6 @@ const Quartz = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-<<<<<<< HEAD
 
       {/* Hero Banner */}
       <section
@@ -34,9 +32,6 @@ const Quartz = () => {
           <div className="h-1 w-16 bg-primary mt-4"></div>
         </div>
       </section>
-=======
-      <Breadcrumb pageName="Quartz" />
->>>>>>> 5f3bcd8ac49ce0ea3896c5b879dffe7cc2f98b79
 
       {/* Main Content */}
       <section className="py-16 bg-white">

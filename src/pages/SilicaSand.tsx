@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
 import silicaSandImage from "@/assets/silica-sand.jpg";
 import constructionGradeImage from "@/assets/construction-grade.jpg";
 import magnetGradeImage from "@/assets/magnet-grade.jpg";
@@ -37,7 +36,6 @@ const SilicaSand = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-<<<<<<< HEAD
 
       {/* Hero Banner */}
       <section
@@ -47,13 +45,11 @@ const SilicaSand = () => {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-white/80 text-sm mb-2">Home &gt; Silica Sand</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white">Silica Sand</h1>
           <div className="h-1 w-16 bg-primary mt-4"></div>
         </div>
       </section>
-=======
-      <Breadcrumb pageName="Silica Sand" />
->>>>>>> 5f3bcd8ac49ce0ea3896c5b879dffe7cc2f98b79
 
       {/* BizWhite Silica-SG11 Section */}
       <section className="py-16 bg-white">
