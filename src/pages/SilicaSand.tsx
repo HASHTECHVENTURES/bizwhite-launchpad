@@ -38,7 +38,7 @@ const SilicaSand = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <Breadcrumb pageName="Silica Sand" backgroundImage={silicaSandImage} />
+      <Breadcrumb pageName="Silica Sand" />
 
       {/* BizWhite Silica-SG11 Section */}
       <section className="py-16 bg-white">
@@ -150,8 +150,8 @@ const SilicaSand = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800"
-                alt="Mining Operations"
+                src={silicaSandImage}
+                alt="Silica Sand Powder"
                 className="w-full rounded-lg shadow-xl"
               />
             </div>
@@ -202,8 +202,8 @@ const SilicaSand = () => {
             </div>
             <div className="space-y-6">
               <img
-                src="https://www.bizwhite.com/wp-content/uploads/2024/11/silica-sand-for-bathroom-fitting-flooring-tiles.jpg"
-                alt="Silica Sand for Bathroom Fitting and Flooring Tiles"
+                src={silicaSandImage}
+                alt="Silica Sand Powder"
                 className="w-full rounded-lg shadow-xl"
               />
               <p className="text-gray-700 leading-relaxed text-justify">
