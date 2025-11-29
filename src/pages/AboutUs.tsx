@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle } from "lucide-react";
 import bizwhiteFacility from "@/assets/bizwhite-facility.jpg";
+import factoryImage from "@/assets/hero-factory.jpg";
 import isoCertificate from "@/assets/iso-certificate.png";
 import dunsCertificate from "@/assets/duns-certificate.png";
 import fieoCertificate from "@/assets/fieo-certificate.png";
@@ -131,7 +132,10 @@ const AboutUs = () => {
 
       {/* Why BizWhite Mines Section */}
       <section
-        className="py-20 bg-[#1a1a1a]"
+        className="py-20 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url(${factoryImage})`,
+        }}
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
