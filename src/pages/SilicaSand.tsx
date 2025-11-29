@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import silicaSandImage from "@/assets/silica-sand-solar.jpg";
+import Breadcrumb from "@/components/Breadcrumb";
+import silicaSandImage from "@/assets/silica-sand-powder.png";
+import solarPanelImage from "@/assets/silica-sand-solar.jpg";
 import constructionGradeImage from "@/assets/construction-grade.jpg";
 import magnetGradeImage from "@/assets/magnet-grade.jpg";
 import glassMakingImage from "@/assets/glass-making.jpg";
@@ -37,19 +39,7 @@ const SilicaSand = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Banner */}
-      <section
-        className="relative pt-32 pb-20 bg-cover bg-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${silicaSandImage})`,
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-white/80 text-sm mb-2">Home &gt; Silica Sand</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white">Silica Sand</h1>
-          <div className="h-1 w-16 bg-primary mt-4"></div>
-        </div>
-      </section>
+      <Breadcrumb pageName="Silica Sand" />
 
       {/* BizWhite Silica-SG11 Section */}
       <section className="py-16 bg-white">
@@ -79,8 +69,8 @@ const SilicaSand = () => {
             </div>
             <div className="relative">
               <img
-                src={silicaSandImage}
-                alt="Silica Sand"
+                src={solarPanelImage}
+                alt="Solar Panel with Silica Sand"
                 className="w-full rounded-lg shadow-xl"
               />
             </div>
@@ -94,8 +84,8 @@ const SilicaSand = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800"
-                alt="Solar Panels"
+                src={silicaSandImage}
+                alt="Silica Sand Powder"
                 className="w-full rounded-lg shadow-xl"
               />
             </div>
@@ -161,8 +151,8 @@ const SilicaSand = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800"
-                alt="Mining Operations"
+                src={silicaSandImage}
+                alt="Silica Sand Powder"
                 className="w-full rounded-lg shadow-xl"
               />
             </div>
@@ -213,8 +203,8 @@ const SilicaSand = () => {
             </div>
             <div className="space-y-6">
               <img
-                src="https://www.bizwhite.com/wp-content/uploads/2024/11/silica-sand-for-bathroom-fitting-flooring-tiles.jpg"
-                alt="Silica Sand for Bathroom Fitting and Flooring Tiles"
+                src={silicaSandImage}
+                alt="Silica Sand Powder"
                 className="w-full rounded-lg shadow-xl"
               />
               <p className="text-gray-700 leading-relaxed text-justify">

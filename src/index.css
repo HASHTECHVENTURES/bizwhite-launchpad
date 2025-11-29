@@ -125,9 +125,49 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
   
+  /* Smooth page transitions */
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
   /* Better image rendering */
   img {
     @apply max-w-full h-auto;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+  }
+  
+  /* Hover effects utility classes */
+  .hover-scale {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-scale:hover {
+    @apply scale-105;
+  }
+  
+  /* Link underline animation */
+  .link-underline {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300;
+  }
+  
+  .link-underline:hover::after {
+    @apply scale-x-100 origin-bottom-left;
+  }
+  
+  /* Pulse glow effect */
+  .pulse-glow {
+    animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 0 0 hsla(25, 100%, 50%, 0.7);
+    }
+    50% {
+      opacity: 0.9;
+      box-shadow: 0 0 0 10px hsla(25, 100%, 50%, 0);
+    }
   }
   
   /* Responsive container improvements for ultra-wide screens */

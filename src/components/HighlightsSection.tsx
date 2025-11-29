@@ -1,70 +1,74 @@
 import { Settings, RefreshCw, CheckCircle, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import certificationsBg from "@/assets/certifications-bg.png";
 import globalInsightsBg from "@/assets/global-insights-bg.png";
 import qualityBg from "@/assets/quality-bg.png";
 
 const HighlightsSection = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
+  
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
 
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Certifications */}
           <div
-            className="relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col animate-fade-in"
+            className={`relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col group hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 ${isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
             style={{
               backgroundImage: `url(${certificationsBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="absolute inset-0 bg-[#1a1a1a]/90"></div>
+            <div className="absolute inset-0 bg-[#1a1a1a]/90 group-hover:bg-[#1a1a1a]/80 transition-all duration-500"></div>
             <div className="relative z-10 p-5 sm:p-6 md:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 md:gap-4 mb-5 sm:mb-6 md:mb-8">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale group-hover:rotate-12 transition-all duration-300">
                   <Settings className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
                   Certifications
                 </h3>
               </div>
               
               <ul className="space-y-2 md:space-y-3 mb-5 sm:mb-6 md:mb-8 flex-grow">
-                <li className="text-white text-sm sm:text-base md:text-lg">ISO 9001 : 2015</li>
-                <li className="text-white text-sm sm:text-base md:text-lg">DUNS</li>
-                <li className="text-white text-sm sm:text-base md:text-lg">FIEO</li>
+                <li className="text-white text-sm sm:text-base md:text-lg transition-all duration-300 hover:translate-x-2 hover:text-[#ff6b35]">ISO 9001 : 2015</li>
+                <li className="text-white text-sm sm:text-base md:text-lg transition-all duration-300 hover:translate-x-2 hover:text-[#ff6b35]">DUNS</li>
+                <li className="text-white text-sm sm:text-base md:text-lg transition-all duration-300 hover:translate-x-2 hover:text-[#ff6b35]">FIEO</li>
               </ul>
 
               <Link 
                 to="/about" 
                 onClick={handleClick}
-                className="inline-flex items-center text-[#ff6b35] font-bold text-sm sm:text-base md:text-lg hover:underline"
+                className="inline-flex items-center text-[#ff6b35] font-bold text-sm sm:text-base md:text-lg hover:underline group/link"
               >
-                read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1" />
+                read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1 group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
 
           {/* Global Manufacturers */}
           <div
-            className="relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col animate-fade-in"
+            className={`relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col group hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 ${isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
             style={{
               backgroundImage: `url(${globalInsightsBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              transitionDelay: isIntersecting ? '200ms' : '0ms'
             }}
           >
-            <div className="absolute inset-0 bg-[#1a1a1a]/90"></div>
+            <div className="absolute inset-0 bg-[#1a1a1a]/90 group-hover:bg-[#1a1a1a]/80 transition-all duration-500"></div>
             <div className="relative z-10 p-5 sm:p-6 md:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 md:gap-4 mb-5 sm:mb-6 md:mb-8">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale">
-                  <RefreshCw className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale group-hover:rotate-12 transition-all duration-300">
+                  <RefreshCw className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white group-hover:animate-spin" />
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
                   Global Manufacturers & Consumer Insights
                 </h3>
               </div>
@@ -76,29 +80,30 @@ const HighlightsSection = () => {
               <Link 
                 to="/about" 
                 onClick={handleClick}
-                className="inline-flex items-center text-[#ff6b35] font-bold text-sm sm:text-base md:text-lg hover:underline"
+                className="inline-flex items-center text-[#ff6b35] font-bold text-sm sm:text-base md:text-lg hover:underline group/link"
               >
-                read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1" />
+                read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1 group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
 
           {/* Quality Products */}
           <div
-            className="relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col md:col-span-2 lg:col-span-1 animate-fade-in"
+            className={`relative rounded-xl overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[450px] flex flex-col md:col-span-2 lg:col-span-1 group hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 ${isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
             style={{
               backgroundImage: `url(${qualityBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              transitionDelay: isIntersecting ? '400ms' : '0ms'
             }}
           >
-            <div className="absolute inset-0 bg-[#1a1a1a]/90"></div>
+            <div className="absolute inset-0 bg-[#1a1a1a]/90 group-hover:bg-[#1a1a1a]/80 transition-all duration-500"></div>
             <div className="relative z-10 p-5 sm:p-6 md:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 md:gap-4 mb-5 sm:mb-6 md:mb-8">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-[#ff6b35] flex items-center justify-center flex-shrink-0 hover-scale group-hover:rotate-12 transition-all duration-300">
                   <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
                   Quality Products
                 </h3>
               </div>
@@ -110,9 +115,9 @@ const HighlightsSection = () => {
               <Link 
                 to="/about" 
                 onClick={handleClick}
-                className="inline-flex items-center text-[#ff6b35] font-bold text-sm sm:text-base md:text-lg hover:underline"
+                className="inline-flex items-center text-[#ff6b35] font-bold text-sm sm:text-base md:text-lg hover:underline group/link"
               >
-                read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1" />
+                read more <ChevronRight className="w-4 h-4 md:w-5 md:h-5 ml-1 group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
