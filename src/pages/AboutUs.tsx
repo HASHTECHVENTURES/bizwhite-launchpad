@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { CheckCircle } from "lucide-react";
 import bizwhiteFacility from "@/assets/bizwhite-facility.jpg";
 import factoryImage from "@/assets/hero-factory.jpg";
@@ -22,16 +23,7 @@ const AboutUs = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Banner */}
-      <section
-        className="relative pt-32 pb-20 bg-[#1a1a1a]"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-white/80 text-sm mb-2">Home &gt; About Us</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white">About Us</h1>
-          <div className="h-1 w-16 bg-primary mt-4"></div>
-        </div>
-      </section>
+      <Breadcrumb pageName="About Us" backgroundImage={bizwhiteFacility} />
 
       {/* Main About Content */}
       <section className="py-16 bg-white">
