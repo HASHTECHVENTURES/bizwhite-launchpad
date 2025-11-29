@@ -203,8 +203,10 @@ const SilicaSand = () => {
             </div>
             <div className="space-y-6">
               <img
-                src={silicaSandImage}
-                alt="Silica Sand Powder"
+                src="https://www.bizwhite.com/wp-content/uploads/2024/11/silica-sand-for-bathroom-fitting-flooring-tiles.jpg"
+                alt="Silica Sand for Bathroom Fitting Flooring Tiles"
+                loading="lazy"
+                decoding="async"
                 className="w-full rounded-lg shadow-xl"
               />
               <p className="text-gray-700 leading-relaxed text-justify">
