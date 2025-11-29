@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import oilBoostImage from "@/assets/oil-boost.jpg";
 import bleachingEarthPowder from "@/assets/bleaching-earth-powder.jpg";
 import oilQuality from "@/assets/oil-quality.jpg";
@@ -49,19 +50,7 @@ const BleachingEarth = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Banner */}
-      <section
-        className="relative pt-32 pb-20 bg-cover bg-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${oilBoostImage})`,
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-white/80 text-sm mb-2">Home &gt; Bleaching Earth</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white">Bleaching Earth</h1>
-          <div className="h-1 w-16 bg-primary mt-4"></div>
-        </div>
-      </section>
+      <Breadcrumb pageName="Bleaching Earth" backgroundImage={oilBoostImage} />
 
       {/* BizWhite Oil Boost Intro */}
       <section className="py-16 bg-primary text-white">
