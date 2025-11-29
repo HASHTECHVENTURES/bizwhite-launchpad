@@ -1,5 +1,8 @@
 import { Settings, RefreshCw, CheckCircle, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import certificationsBg from "@/assets/certifications-bg.png";
+import globalInsightsBg from "@/assets/global-insights-bg.png";
+import qualityBg from "@/assets/quality-bg.png";
 
 const HighlightsSection = () => {
   const handleClick = () => {
@@ -14,7 +17,7 @@ const HighlightsSection = () => {
           <div
             className="relative rounded-xl overflow-hidden min-h-[300px] md:min-h-[400px] flex flex-col"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800')`,
+              backgroundImage: `url(${certificationsBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
@@ -50,7 +53,7 @@ const HighlightsSection = () => {
           <div
             className="relative rounded-xl overflow-hidden min-h-[300px] md:min-h-[400px] flex flex-col"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800')`,
+              backgroundImage: `url(${globalInsightsBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
@@ -84,7 +87,7 @@ const HighlightsSection = () => {
           <div
             className="relative rounded-xl overflow-hidden min-h-[300px] md:min-h-[400px] flex flex-col sm:col-span-2 lg:col-span-1"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800')`,
+              backgroundImage: `url(${qualityBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
